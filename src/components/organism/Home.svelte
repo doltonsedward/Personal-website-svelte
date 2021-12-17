@@ -1,4 +1,6 @@
 <script>
+    
+
     $: document.title = 'Home page'
 </script>
 
