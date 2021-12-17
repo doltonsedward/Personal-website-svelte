@@ -1,6 +1,5 @@
 <script>
-	import { Header, Footer } from './components'
-	export let name
+	import { Header, Home, Portfolio, AboutMe } from './components'
 	export let title
 
 	$: document.title = title
@@ -14,7 +13,13 @@
 
 <Header {navItems} {activeIn} on:navChange={navChange} />
 <main>
-	<h1>Hello {name}!</h1>
+	{#if activeIn === 'Home'}
+		<Home />
+	{:else if activeIn === 'About me' }
+		<AboutMe />
+	{:else if activeIn === 'Portfolio' }
+		<Portfolio />
+	{/if}
 </main>
 
 <style>
@@ -23,13 +28,6 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
 	}
 
 	@media (min-width: 640px) {
