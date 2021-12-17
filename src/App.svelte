@@ -1,14 +1,20 @@
 <script>
-	export let name;
-	let count = 0;
+	import { Header, Footer } from './components'
+	export let name
+	export let title
 
-	const handleCount = () => count++
+	$: document.title = title
+
+	let navItems = ['Home', 'About me', 'Portfolio']
+	let activeIn = 'Home'
+	const navChange = (e) => {
+		activeIn = e.detail
+	}
 </script>
 
+<Header {navItems} {activeIn} on:navChange={navChange} />
 <main>
 	<h1>Hello {name}!</h1>
-	<p>Now, count is {count}</p>
-	<button on:click={handleCount}>Count++</button>
 </main>
 
 <style>
