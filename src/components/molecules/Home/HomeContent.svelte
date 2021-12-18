@@ -10,37 +10,47 @@
         <div class="achievement flex items-center flex-column col-4">
             <div class="achievement-box">
                 <div class="scoring" data-aos="fade-up">
-                    <p>12</p>
+                    <p>18</p>
                 </div>
-                <p class="title">Certificate</p>
+                <p class="title">Stack i know</p>
             </div>
             <div class="achievement-box">
                 <div class="scoring" data-aos="fade-up">
-                    <p>12</p>
+                    <p>6</p>
                 </div>
                 <p class="title">Certificate</p>
             </div>
         </div>
         <div class="service flex flex-center col-4">
-            <div class="box">
-                <h2 class="text-center">Services</h2>
+            <div class="box" data-aos="fade-up">
+                <h2 class="text-center">Skill</h2>
                 <br>
-                <p>Product Designer</p>
+                <ul>
+                    <li>
+                        <p>React.Js</p>
+                        <span></span>
+                    </li>
+                    <li>React Native</li>
+                    <li>Axios</li>
+                    <li>Express</li>
+                    <li>Node.Js</li>
+                </ul>
             </div>
         </div>
         <div class="service-proof flex flex-center col-4">
-            <div class="box">
+            <div class="box" data-aos="fade-up">
                 <h2>My awesome service</h2>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Curriculum Vitae and all the projects I've ever made. </p>
                 <br>
-                <button class="btn button-theme">Download CV</button>
+                <button class="btn button-theme"><a href="/assets/doltons-cv.pdf" target="_blank">View CV</a></button>
             </div>
         </div>
     </div>
 </div>
 
 <style>
+    
     .achievement-box {
         padding: 30px 0 10px;
         display: flex;
@@ -56,6 +66,7 @@
         box-shadow: 0 5px 20px rgba(118, 118, 118, 0.2);
     }
     
+    .achievement-box:nth-child(2) .scoring { border-color: #f7dfae }
     .achievement-box .scoring {
         position: absolute;
         top: -50%;
@@ -74,6 +85,7 @@
         color: #6b6b6b;
     }
 
+    .achievement-box:nth-child(2)::before { background-color: #f7dfae }
     .achievement-box::before {
         content: '';
         position: absolute;
@@ -87,6 +99,7 @@
         border-radius: var(--border-trendy);
     }
 
+
     .service .box {
         padding: 20px 40px;
         width: 80%;
@@ -97,8 +110,19 @@
 
     .service .box h2 { font-weight: 100 }
 
+    .service .box li {
+        display: flex;
+        list-style: none;
+    }
+
+    .service .box span {
+
+    }
+
     .service-proof .box {
         padding: 10px 40px;
         width: 80%;
     }
+
+    a { color: var(--btn-color) }
 </style>
