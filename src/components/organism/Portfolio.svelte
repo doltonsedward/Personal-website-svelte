@@ -9,9 +9,9 @@
     AOS.init(); // initializing AOS
 </script>
 
-<div class="">
-    <div class="">
-        <h1 class="text-center">Portfolios</h1>
+<div>
+    <div>
+        <h1 class="text-center">Portfolio</h1>
     </div>
     <div class="wrapper-data__portfolio responsive-grid">
         {#each dataPortfolio as item}
@@ -73,7 +73,7 @@
     }
 
     .card-content {
-        color: rgb(130, 130, 130);
+        color: var(--color-subtitle);
         position: relative;
         height: 100px;
         overflow: hidden;
