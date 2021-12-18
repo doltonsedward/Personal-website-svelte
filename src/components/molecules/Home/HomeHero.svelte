@@ -1,4 +1,8 @@
 <script>
+    import AOS from 'aos';
+    import 'aos/dist/aos.css'; 
+
+    AOS.init()
     import { redirect } from '../../../script'
 </script>
 
@@ -50,6 +54,7 @@
     .section-two {
         display: none;
         width: 550px;
+        min-height: 550px;
         position: relative;
     }
     
