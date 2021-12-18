@@ -88,7 +88,7 @@
     }
 
     .service .box {
-        padding: 10px 40px;
+        padding: 20px 40px;
         width: 80%;
         color: var(--bg-theme);
         background: linear-gradient(to bottom left, #a78ae9, #ef8ea6);
