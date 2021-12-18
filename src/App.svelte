@@ -26,8 +26,6 @@
 	main {
 		max-width: 240px;
 		margin: 0 auto;
-		padding-top: 30px;
-		padding-bottom: 30px;
 	}
 
 	@media (min-width: 640px) {
