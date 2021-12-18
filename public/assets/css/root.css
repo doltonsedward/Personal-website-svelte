@@ -1,9 +1,14 @@
 :root {
+    --white: rgb(255, 255, 255);
+    --lightblue: #cef1fa;
     --orange: #fca61e;
     --orange-low: #f5f05e;
 
     --color-theme: var(--orange);
     --cover-color-theme: var(--orange-low);
+    --color-secondary: var(--lightblue);
+
+    --bg-theme: var(--white);
 
     --btn-color: white;
 
