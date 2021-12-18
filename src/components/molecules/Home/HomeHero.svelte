@@ -2,7 +2,7 @@
     <div class="section-one col-6">
         <h1 class="title">
             <p>Hy!, I am</p>
-            <p class="name">Doltons Edward N Pabiaran</p>
+            <p class="name">Doltonss Edward N Pabiaran</p>
         </h1>
         <br>
         <p class="description-section-one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -37,7 +37,6 @@
     }
 
     .section-two {
-        width: 500px;
         position: relative;
     }
     
