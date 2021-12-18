@@ -15,9 +15,9 @@ const buttonRipple = (e) => {
 
 // alert function
 let timerInterval
-const showAlert = () => {
+const showAlert = (targetName) => {
     Swal.fire({
-        title: 'Redirect to github!',
+        title: `Redirect to ${targetName ?? 'github'}!`,
         html: 'I will close in <b></b> milliseconds.',
         timer: 1500,
         timerProgressBar: true,
@@ -32,6 +32,14 @@ const showAlert = () => {
             clearInterval(timerInterval)
         }
     })
+}
+
+// redirect function
+const redirect = (target, targetName) => {
+    showAlert(targetName)
+    setTimeout(() => {
+        open(target)
+    }, 1500);
 }
 
 // data portfolio
@@ -68,4 +76,4 @@ const dataPortfolio = [
     },
 ]
 
-export { buttonRipple, showAlert, dataPortfolio }
+export { buttonRipple, redirect, dataPortfolio }
