@@ -1,3 +1,7 @@
+<script>
+    import { redirect } from '../../../script'
+</script>
+
 <div class="hero">
     <div class="section-one">
         <h1 class="title">
@@ -9,7 +13,7 @@
             Asperiores, porro deleniti natus alias soluta itaque dolorem 
         </p>
         <br>
-        <button class="btn button-theme">Hire Me</button>
+        <button class="btn button-theme" on:click={()=> redirect('https://www.linkedin.com/in/doltons-edward-nicholas-p', 'Linkedin')}>Hire Me</button>
         <br>
     </div>
     <div class="section-two">
