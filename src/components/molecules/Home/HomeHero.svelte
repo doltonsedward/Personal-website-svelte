@@ -13,8 +13,8 @@
             <p class="name">Doltons Edward N.P</p>
         </h1>
         <br>
-        <p class="description-section-one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            Asperiores, porro deleniti natus alias soluta itaque dolorem 
+        <p class="description-section-one">
+            Fullstack developer with new innovation and persistence in learning new things
         </p>
         <br>
         <button class="btn button-theme" on:click={()=> redirect('https://www.linkedin.com/in/doltons-edward-nicholas-p', 'Linkedin')}>Hire Me</button>
