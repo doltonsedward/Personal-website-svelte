@@ -25,11 +25,11 @@ body {
 }
 
 a {
-	color: rgb(0,100,200);
+	color: white;
 	text-decoration: none;
 }
 
-a:hover { text-decoration: underline }
+a:hover { text-decoration: none }
 a:visited { color: rgb(0,80,160) }
 
 h1 { font-family: 'Typographica', Arial, Helvetica, sans-serif; letter-spacing: 2px; }
@@ -44,16 +44,11 @@ input, button, select, textarea {
 	border-radius: 2px;
 }
 
-input:disabled { color: #ccc }
-
 button {
 	border: none;
 	outline: none;
 	cursor: pointer;
 }
-
-button:disabled { color: #999 } 
-button:not(:disabled):active { background-color: #ddd }
 
 .padding-default { padding: 0 3.5rem }
 .to-right {
