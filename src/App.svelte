@@ -5,7 +5,7 @@
 	$: document.title = title
 
 	let navItems = ['Home', 'About me', 'Portfolio', 'Contact']
-	let activeIn = 'Home'
+	let activeIn = 'Portfolio'
 	const navChange = (e) => {
 		activeIn = e.detail
 	}
