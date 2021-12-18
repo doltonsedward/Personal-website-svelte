@@ -3,6 +3,24 @@
     import 'aos/dist/aos.css' 
     
     AOS.init()
+
+    const dataSkill = [
+        { name: "JavaScript", level: "Advanced" },
+        { name: "PHP", level: "Intermediate" },
+        { name: "React", level: "Advanced" },
+        { name: "React Native", level: "Novice" },
+        { name: "Laravel", level: "Novice" },
+        { name: "Svelte", level: "Intermediate" },
+        { name: "Socket.io", level: "Intermediate" },
+        { name: "Express", level: "Advanced" },
+        { name: "ORM & ODB", level: "Intermediate" },
+    ]
+
+    const dataTools = [
+        { name: "Adobe XD", level: "Intermediate" },
+        { name: "Inkscape", level: "Expert" },
+        { name: "Git", level: "Advanced" },
+    ]
 </script>
 
 <div class="content">
@@ -24,16 +42,22 @@
         <div class="service flex flex-center col-4">
             <div class="box" data-aos="fade-up">
                 <h2 class="text-center">Skill</h2>
-                <br>
-                <ul>
-                    <li>
-                        <p>React.Js</p>
-                        <span></span>
-                    </li>
-                    <li>React Native</li>
-                    <li>Axios</li>
-                    <li>Express</li>
-                    <li>Node.Js</li>
+                <ul class="list-skill">
+                    {#each dataSkill as item}
+                        <li data-aos="fade-up">
+                            <p>{item.name}</p>
+                            <p class={`skill ` + item.level.toLowerCase()}>{item.level}</p>
+                        </li>
+                    {/each}
+                </ul>
+                <h2 class="text-center">Tools</h2>
+                <ul class="list-skill">
+                    {#each dataTools as item}
+                        <li>
+                            <p>{item.name}</p>
+                            <p class={`skill ` + item.level.toLowerCase()}>{item.level}</p>
+                        </li>
+                    {/each}
                 </ul>
             </div>
         </div>
@@ -50,7 +74,7 @@
 </div>
 
 <style>
-    
+    .content { margin: 10px 0 }
     .achievement-box {
         padding: 30px 0 10px;
         display: flex;
@@ -102,7 +126,7 @@
 
     .service .box {
         padding: 20px 40px;
-        width: 80%;
+        width: 90%;
         color: var(--bg-theme);
         background: linear-gradient(to bottom left, #a78ae9, #ef8ea6);
         border-radius: var(--border-trendy);
@@ -112,13 +136,28 @@
 
     .service .box li {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
         list-style: none;
+        margin-bottom: 5px;
     }
 
-    .service .box span {
-
+    .list-skill { 
+        margin-top: 10px;
+        margin-bottom: 30px 
     }
 
+    .list-skill .skill { 
+        color: #6b6b6b;
+        padding: 2px 16px;
+        border-radius: 23px;
+    }
+
+    .list-skill .novice { background-color: var(--bg-theme) }
+    .list-skill .intermediate { background-color: #f3ecc4 }
+    .list-skill .expert { background-color: #caf3c4 }
+    .list-skill .advanced { background-color: #c4d1f3 }
+    
     .service-proof .box {
         padding: 10px 40px;
         width: 80%;
