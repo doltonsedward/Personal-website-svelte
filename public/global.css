@@ -60,6 +60,36 @@ button:not(:disabled):active { background-color: #ddd }
 	display: block;
 }
 
+.btn-ripple { 
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-ripple span {
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transform: translate(-50%, -50%);
+    animation: ripple 600ms linear;
+    background-color: var(--bg-theme);
+}
+
+@keyframes ripple {
+	to {
+		transform: scale(4);
+	}
+	0% {
+		width: 0px;
+		height: 0px;
+		opacity: .5;
+	}
+	100% {
+		width: 500px;
+		height: 500px;
+		opacity: 0;
+	}
+}
+
 @media (min-width: 600px)  {
 	.to-right {
 		display: flex;
