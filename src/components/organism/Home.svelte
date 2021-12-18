@@ -9,8 +9,3 @@
     <HomeHero />
     <HomeContent />
 </div>
-
-<style>
-    .container {
-    }
-</style>
