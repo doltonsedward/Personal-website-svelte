@@ -2,8 +2,8 @@
 @import './assets/css/shortcut.css';
 
 @font-face {
-	font-family: 'Trench';
-	src: url('./assets/font/TrenchThin-16R0.otf');
+	font-family: 'Typographica';
+	src: url('./assets/font/Typographica-Blp5.ttf');
 }
 @font-face {
 	font-family: 'Poppins Regular';
@@ -30,7 +30,7 @@ a {
 a:hover { text-decoration: underline }
 a:visited { color: rgb(0,80,160) }
 
-h1 { font-family: 'Trench', Arial, Helvetica, sans-serif }
+h1 { font-family: 'Typographica', Arial, Helvetica, sans-serif; letter-spacing: 2px; }
 label { display: block }
 input, button, select, textarea {
 	font-family: inherit;
@@ -53,4 +53,4 @@ button {
 button:disabled { color: #999 } 
 button:not(:disabled):active { background-color: #ddd }
 
-.padding-default { padding: 0 50px }
+.padding-default { padding: 0 5rem }
