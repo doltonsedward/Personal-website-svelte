@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "aos": "^3.0.0-beta.6",
-    "sirv-cli": "^1.0.0"
+    "sirv-cli": "^1.0.0",
+    "sweetalert2": "^11.3.0"
   }
 }
