@@ -8,7 +8,7 @@
 
 <header class="padding-default row">
     <p class="logo col-6">Personal</p>
-    <nav class="col-6">
+    <nav class="col-6 to-right">
         <ul class="list-nav">
             {#each navItems as item}
                 <li on:click={() => dispatch('navChange', item)}>
@@ -28,11 +28,6 @@
     .logo {
         font-size: 20px;
         font-weight: 700;
-    }
-    
-    nav {
-        display: flex;
-        justify-content: flex-end;
     }
     
     ul {
