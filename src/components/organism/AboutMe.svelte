@@ -1,4 +1,5 @@
 <script>
+    import { redirect } from '../../script'
     import AOS from 'aos';
     import 'aos/dist/aos.css'; 
 
@@ -27,7 +28,7 @@
                     and Mobile App
                 </p>
                 <br>
-                <button class="btn button-theme">Hire Me</button>
+                <button class="btn button-theme" on:click={()=> redirect('https://www.linkedin.com/in/doltons-edward-nicholas-p', 'Linkedin')}>Hire Me</button>
             </div>
         </div>
     </div>
