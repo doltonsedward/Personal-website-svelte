@@ -7,8 +7,8 @@
 </script>
 
 <header class="padding-default row">
-    <p class="logo col-6">Personal</p>
-    <nav class="col-6 to-right">
+    <p class="logo col-2">Personal</p>
+    <nav class="col-10 to-right">
         <ul class="list-nav">
             {#each navItems as item}
                 <li on:click={() => dispatch('navChange', item)}>
@@ -40,6 +40,10 @@
         cursor: pointer;
     }
 
+    li:hover p:not(.active) {
+        color: var(--color-theme);
+        opacity: .5;
+    }
 
     .active {
         color: var(--color-theme)
