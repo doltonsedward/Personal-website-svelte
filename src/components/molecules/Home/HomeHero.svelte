@@ -2,7 +2,7 @@
     <div class="section-one">
         <h1 class="title">
             <p>Hy!, I am</p>
-            <p class="name">Doltonss Edward N.P</p>
+            <p class="name">Doltons Edward N.P</p>
         </h1>
         <br>
         <p class="description-section-one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
