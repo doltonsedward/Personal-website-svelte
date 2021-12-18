@@ -34,6 +34,7 @@ a:visited { color: rgb(0,80,160) }
 
 h1 { font-family: 'Typographica', Arial, Helvetica, sans-serif; letter-spacing: 2px; }
 label { display: block }
+li { list-style: none }
 input, button, select, textarea {
 	font-family: inherit;
 	font-size: inherit;
