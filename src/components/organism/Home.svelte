@@ -1,19 +1,16 @@
 <script>
     import HomeHero from "../molecules/Home/HomeHero.svelte";
+    import HomeContent from "../molecules/Home/HomeContent.svelte"
     
     $: document.title = 'Home page'
 </script>
 
 <div class="container">
     <HomeHero />
-    
+    <HomeContent />
 </div>
 
 <style>
     .container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
     }
 </style>
