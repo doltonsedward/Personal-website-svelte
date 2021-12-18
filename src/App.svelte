@@ -1,11 +1,11 @@
 <script>
-	import { Header, Home, Portfolio, AboutMe } from './components'
+	import { Header, Home, Portfolio, AboutMe, Contact } from './components'
 	export let title
 
 	$: document.title = title
 
 	let navItems = ['Home', 'About me', 'Portfolio', 'Contact']
-	let activeIn = 'Portfolio'
+	let activeIn = 'Home'
 	const navChange = (e) => {
 		activeIn = e.detail
 	}
@@ -19,6 +19,8 @@
 		<AboutMe />
 	{:else if activeIn === 'Portfolio' }
 		<Portfolio />
+	{:else if activeIn === 'Contact' }
+		<Contact />
 	{/if}
 </main>
 
