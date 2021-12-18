@@ -1,0 +1,12 @@
+:root {
+    --orange: #F5B35E;
+    --orange-low: #f5f05e;
+
+    --color-theme: var(--orange);
+    --cover-color-theme: var(--orange-low);
+
+    --btn-color: white;
+
+    /* border */
+    --border-trendy: 5px
+}
