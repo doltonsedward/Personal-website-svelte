@@ -6,7 +6,8 @@
     const dispatch = createEventDispatcher()
 </script>
 
-<header>
+<header class="padding-default">
+    <p class="logo">Personal</p>
     <nav>
         <ul class="list-nav">
             {#each navItems as item}
@@ -19,6 +20,19 @@
 </header>
 
 <style>
+    header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    
     ul {
         display: flex;
         list-style: none;
@@ -30,6 +44,6 @@
     }
 
     .active {
-        color: red
+        color: var(--color-theme)
     }
 </style>
