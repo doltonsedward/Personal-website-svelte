@@ -9,7 +9,7 @@
             Asperiores, porro deleniti natus alias soluta itaque dolorem 
         </p>
         <br>
-        <button class="btn button-theme">Hire me</button>
+        <button class="btn button-theme">Hire Me</button>
         <br>
     </div>
     <div class="section-two">
