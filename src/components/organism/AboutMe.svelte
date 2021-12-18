@@ -1,10 +1,12 @@
 <script>
 
-    $: document.title = 'About us'
+    $: document.title = 'About me'
 </script>
 
-<div>
-    <h1>Halo!, about me</h1>
+<div class="row">
+    <div class="col-12">
+        <h1>Halo!, about me</h1>
+    </div>
 </div>
 
 <style>
