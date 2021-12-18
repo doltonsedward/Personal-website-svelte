@@ -1,5 +1,5 @@
 <script>
-    import { buttonRipple, showAlert, dataPortfolio } from '../../script'
+    import { buttonRipple, redirect, dataPortfolio } from '../../script'
     import AOS from 'aos';
     import 'aos/dist/aos.css'; 
     
@@ -7,14 +7,6 @@
     
    
     AOS.init(); // initializing AOS
-    // redirect function
-    const redirect = (target) => {
-        showAlert()
-        setTimeout(() => {
-            open(target)
-        }, 1500);
-    }
-
 </script>
 
 <div class="">
@@ -39,7 +31,7 @@
                             class="btn button-theme btn-ripple" 
                             on:click={(e) => {
                                 buttonRipple(e) 
-                                redirect(item.url)
+                                redirect(item.url, 'Github')
                             }}
                         >
                             See Detail
