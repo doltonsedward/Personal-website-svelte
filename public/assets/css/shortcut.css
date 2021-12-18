@@ -29,5 +29,11 @@
 
 /* display */
 .flex { display: flex }
+.flex-center { justify-content: center }
 .flex-between { justify-content: space-between }
+.flex-column { flex-direction: column }
 .items-center { align-items: center }
+
+
+/* align */
+.text-center { text-align: center }
