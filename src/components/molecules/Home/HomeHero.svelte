@@ -1,8 +1,8 @@
-<div class="hero row">
-    <div class="section-one col-6">
+<div class="hero">
+    <div class="section-one">
         <h1 class="title">
             <p>Hy!, I am</p>
-            <p class="name">Doltonss Edward N Pabiaran</p>
+            <p class="name">Doltonss Edward N.P</p>
         </h1>
         <br>
         <p class="description-section-one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -12,7 +12,7 @@
         <button class="btn button-theme">Hire me</button>
         <br>
     </div>
-    <div class="section-two col-6">
+    <div class="section-two">
         <img class="profile-image" src="/assets/profile.png" alt="admin profile">
         <img class="bubble-icon js" src="/assets/js-bubble.png" alt="javascript bubble">
         <img class="bubble-icon socket" src="/assets/socket-bubble.png" alt="socket bubble">
@@ -20,6 +20,13 @@
 </div>
 
 <style>
+    .hero {
+        margin: 0 16px 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
     .title {
         font-size: 50px;
     }
@@ -37,6 +44,8 @@
     }
 
     .section-two {
+        display: none;
+        width: 550px;
         position: relative;
     }
     
@@ -69,6 +78,12 @@
     @keyframes toTopBottom2 {
         50% {
             transform: translateY(20px);
+        }
+    }
+
+    @media (min-width: 1000px) {
+        .section-two {
+            display: block;
         }
     }
 </style>
