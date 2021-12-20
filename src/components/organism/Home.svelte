@@ -1,11 +1,11 @@
 <script>
     import HomeHero from "../molecules/Home/HomeHero.svelte";
     import HomeContent from "../molecules/Home/HomeContent.svelte"
-    
-    $: document.title = 'Home page'
+
+    export let dataSkill, dataTools
 </script>
 
 <div class="container">
     <HomeHero />
-    <HomeContent />
+    <HomeContent {dataSkill} {dataTools} />
 </div>
