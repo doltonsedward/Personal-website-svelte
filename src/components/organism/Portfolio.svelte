@@ -1,7 +1,8 @@
 <script>
-    import { buttonRipple, redirect, dataPortfolio } from '../../script'
+    import { buttonRipple, redirect } from '../../script'
     import AOS from 'aos';
     import 'aos/dist/aos.css'; 
+    export let dataPortfolio
     
     $: document.title = 'Portfolio'
     
