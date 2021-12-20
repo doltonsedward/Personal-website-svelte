@@ -34,20 +34,20 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-    }
-    .title {
-        font-size: 50px;
+        overflow: hidden;
+        max-width: 100%;
+        min-height: 50vh;
     }
 
-    .title p {
-        line-height: 4rem;
+    .title {
+        font-size: 40px;
     }
 
     .title .name {
         color: var(--color-theme);
     }
 
-    .description-section-one {
+    .section-one {
         width: 500px;
     }
 
@@ -90,7 +90,18 @@
         }
     }
 
+    @media (min-width: 600px) {
+        .title {
+            font-size: 50px;
+        }
+
+        .title p {
+            line-height: 4rem;
+        }
+    }
+
     @media (min-width: 1000px) {
+        
         .section-two {
             display: block;
         }
