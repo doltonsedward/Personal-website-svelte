@@ -1,6 +1,6 @@
 <script>
 	import { Header, Home, Portfolio, AboutMe, Contact } from './components'
-	export let title
+	export let title, dataSkill, dataTools, dataPortfolio
 
 	$: document.title = title
 
@@ -14,11 +14,11 @@
 <Header {navItems} {activeIn} on:navChange={navChange} />
 <main class="padding-default">
 	{#if activeIn === 'Home'}
-		<Home />
+		<Home {dataSkill} {dataTools} />
 	{:else if activeIn === 'About me' }
 		<AboutMe />
 	{:else if activeIn === 'Portfolio' }
-		<Portfolio />
+		<Portfolio {dataPortfolio} />
 	{:else if activeIn === 'Contact' }
 		<Contact />
 	{/if}
