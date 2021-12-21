@@ -1,15 +1,17 @@
 <script defer>
-  import { onMount, createEventDispatcher } from "svelte";
+  import { onMount, createEventDispatcher, afterUpdate } from "svelte";
+  export let activeIn 
   
   const dispatch = createEventDispatcher()
   
+  let clickEffect
   onMount(() => {
       const body = document.body;
       const menu = body.querySelector(".menu")
       const menuItems = menu.querySelectorAll(".menu__item")
       const menuBorder = menu.querySelector(".menu__border")
       let activeItem = menu.querySelector(".active")
-  
+
       function clickItem(item) {
           menu.style.removeProperty("--timeOut")
           
@@ -22,17 +24,17 @@
       }
   
       function offsetMenuBorder(element, menuBorder) {
-  
           const offsetActiveItem = element.getBoundingClientRect()
           const left = Math.floor(offsetActiveItem.left - menu.offsetLeft - (menuBorder.offsetWidth  - offsetActiveItem.width) / 2) +  "px"
           menuBorder.style.transform = `translate3d(${left}, 0 , 0)`
-  
       }
+
+      clickEffect = clickItem
   
       offsetMenuBorder(activeItem, menuBorder)
   
-      menuItems.forEach((item, index) => {
-          item.addEventListener("click", () => clickItem(item, index))
+      menuItems.forEach(item => {
+          item.addEventListener("click", () => clickItem(item))
       })
   
       window.addEventListener("resize", () => {
@@ -40,11 +42,22 @@
           menu.style.setProperty("--timeOut", "none")
       })
   })
+
+  afterUpdate(() => {
+    const menuItems = document.querySelectorAll(".menu__item")
+    menuItems.forEach(item => {
+        if (item.classList.contains(activeIn)) {
+          clickEffect(item)
+        } else if (item.classList.contains(activeIn.split(' ').join('-'))) {
+          clickEffect(item)
+        }
+    })
+  })
   </script>
   
   <nav class="mobile-nav menu">
     <menu class="menu">
-      <button class="menu__item active" style="--bgColorItem: #ff8c00" on:click={()=> dispatch('navChange', 'Home')}>
+      <button class="menu__item Home" class:active={activeIn === 'Home'} style="--bgColorItem: #ff8c00" on:click={()=> dispatch('navChange', 'Home')}>
           <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +72,7 @@
           </svg>
       </button>
   
-      <button class="menu__item" style="--bgColorItem: #f54888" on:click={()=> dispatch('navChange', 'About me')}>
+      <button class="menu__item About-me" class:active={activeIn === 'About me'} style="--bgColorItem: #f54888" on:click={()=> dispatch('navChange', 'About me')}>
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +84,7 @@
         </svg>
       </button>
   
-      <button class="menu__item" style="--bgColorItem: #e0b115" on:click={()=> dispatch('navChange', 'Portfolio')}>
+      <button class="menu__item Portfolio" class:active={activeIn === 'Portfolio'} style="--bgColorItem: #e0b115" on:click={()=> dispatch('navChange', 'Portfolio')}>
         <svg class="icon" viewBox="0 0 24 24">
           <path
             d="M5.1,3.9h13.9c0.6,0,1.2,0.5,1.2,1.2v13.9c0,0.6-0.5,1.2-1.2,1.2H5.1c-0.6,0-1.2-0.5-1.2-1.2V5.1
@@ -82,7 +95,7 @@
         </svg>
       </button>
   
-      <button class="menu__item" style="--bgColorItem: #65ddb7" on:click={()=> dispatch('navChange', 'Contact')}>
+      <button class="menu__item Contact" class:active={activeIn === 'Contact'} style="--bgColorItem: #65ddb7" on:click={()=> dispatch('navChange', 'Contact')}>
         <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 43.59 40.14">
             <defs>
               <style>
