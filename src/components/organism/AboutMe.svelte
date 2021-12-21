@@ -16,19 +16,19 @@
             <div class="section-one" data-aos="zoom-in">
                 <div class="sosmed">
                     <div class="inner__sosmed">
-                        <div class="item__sosmed">
+                        <div class="item__sosmed" on:click={() => redirect('https://wa.me/+6289619800459', 'Whatsapp')}>
                             <div>
                                 <img src="/assets/icon/wa.svg" alt="Doltons Whatsapp">
                             </div>
                             <p>Whatsapp</p>
                         </div>
-                        <div class="item__sosmed">
+                        <div class="item__sosmed" on:click={() => redirect('https://www.instagram.com/dollonged', 'Instagram')}>
                             <div>
                                 <img src="/assets/icon/instagram.svg" alt="Doltons Instagram">
                             </div>
                             <p>Instagram</p>
                         </div>
-                        <div class="item__sosmed">
+                        <div class="item__sosmed" on:click={() => redirect('https://www.linkedin.com/in/doltons-edward-nicholas-p', 'Linkedin')}>
                             <div>
                                 <img src="/assets/icon/linkedin.svg" alt="Doltons Whatsapp">
                             </div>
@@ -94,6 +94,7 @@
         position: absolute;
         top: 0;
         left: -100%;
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .section-one:hover .sosmed {
