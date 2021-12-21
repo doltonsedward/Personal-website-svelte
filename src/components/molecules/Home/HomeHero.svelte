@@ -29,7 +29,7 @@
 
 <style>
     .hero {
-        margin: 0 16px 4rem;
+        margin-bottom: 4rem;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
