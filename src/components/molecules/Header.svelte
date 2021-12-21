@@ -6,9 +6,9 @@
     const dispatch = createEventDispatcher()
 </script>
 
-<header class="padding-default row">
-    <p class="logo col-2">Personal</p>
-    <nav class="col-10">
+<header class="padding-default">
+    <p class="logo">Personal</p>
+    <nav>
         <ul class="list-nav">
             {#each navItems as item}
                 <li on:click={() => dispatch('navChange', item)}>
@@ -21,6 +21,9 @@
 
 <style>
     header {
+        display: none;
+        justify-content: space-between;
+        align-items: center;
         padding-top: 20px;
         padding-bottom: 20px;
     }
@@ -28,10 +31,6 @@
     .logo {
         font-size: 20px;
         font-weight: 700;
-    }
-
-    nav {
-        display: none;
     }
     
     ul {
@@ -54,6 +53,10 @@
     }
 
     @media (min-width: 750px) {
+        header {
+            display: flex;
+        }
+        
         nav {
             display: flex;
             justify-content: right;
