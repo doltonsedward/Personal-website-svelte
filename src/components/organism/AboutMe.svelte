@@ -52,7 +52,7 @@
         width: 250px;
         height: 300px;
         overflow: hidden;
-        margin-right: 50px;
+        margin: 0 auto 20px;
     }
     
     .section-one img {
@@ -73,6 +73,10 @@
         letter-spacing: 2px;
     }
 
+    h3 {
+        font-size: 18px;
+    }
+
     .subtitle__section-two_card{ 
         color: var(--color-subtitle);
         margin-top: 20px;
@@ -80,5 +84,11 @@
 
     .button-theme {
         z-index: 1;
+    }
+
+    @media (min-width: 750px) {
+        .section-one {
+            margin: 0 50px 0 0;
+        }
     }
 </style>
