@@ -143,9 +143,16 @@
     .list-skill .advanced { background-color: #c4d1f3 }
     
     .service-proof .box {
+        margin-top: 20px;
         padding: 10px 40px;
         width: 80%;
     }
 
     a { color: var(--btn-color) }
+
+    @media (min-width: 750px) {
+        .service-proof .box {
+            margin-top: 0;
+        }
+    }
 </style>
