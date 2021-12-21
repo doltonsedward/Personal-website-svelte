@@ -49,6 +49,7 @@ button {
 	border: none;
 	outline: none;
 	cursor: pointer;
+	user-select: none;
 }
 
 .padding-default { padding: 0 1rem }
@@ -87,7 +88,7 @@ button {
 }
 
 @media (min-width: 600px)  {
-	.padding-default { padding: 0 3.5rem }
+	.padding-default { padding: 0 4rem }
 	.to-right {
 		display: flex;
 		justify-content: right;
