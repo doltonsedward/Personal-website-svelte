@@ -21,11 +21,14 @@
 
 <style>
     header {
+        position: relative;
         display: none;
         justify-content: space-between;
         align-items: center;
         padding-top: 20px;
         padding-bottom: 20px;
+        z-index: 999;
+        background-color: var(--bg-theme);
     }
 
     .logo {
