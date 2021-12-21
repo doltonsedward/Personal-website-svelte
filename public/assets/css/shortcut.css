@@ -21,10 +21,12 @@
     height: 50%;
     box-shadow: 0 20px 30px #fc9632;
     z-index: -1;
+    transition: .3s;
 }
 
 .button-theme:hover::after {
-    box-shadow: 0 20px 40px #fc9632;
+    box-shadow: 0 15px 10px #fc9632;
+    transition: .3s;
 }
 
 /* display */
