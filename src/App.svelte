@@ -23,7 +23,7 @@
 		<Contact />
 	{/if}
 </main>
-<MobileNav on:navChange={navChange} />
+<MobileNav {activeIn} on:navChange={navChange} />
 
 <style>
 	main {
