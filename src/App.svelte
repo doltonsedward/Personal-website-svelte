@@ -1,5 +1,5 @@
 <script>
-	import { Header, Home, Portfolio, AboutMe, Contact } from './components'
+	import { Header, Home, Portfolio, AboutMe, Contact, MobileNav } from './components'
 	export let title, dataSkill, dataTools, dataPortfolio
 
 	$: document.title = title
@@ -23,9 +23,16 @@
 		<Contact />
 	{/if}
 </main>
+<MobileNav on:navChange={navChange} />
 
 <style>
 	main {
-		margin: 0 auto;
+		margin: 10px auto 80px;
+	}
+
+	@media (min-width: 750px) {
+		main {
+			margin: 0 auto 25px;
+		}
 	}
 </style>
