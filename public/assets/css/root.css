@@ -14,5 +14,8 @@
     --btn-color: white;
 
     /* border */
-    --border-trendy: 5px
+    --border-trendy: 5px;
+
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;  
 }
