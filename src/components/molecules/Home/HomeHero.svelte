@@ -36,7 +36,7 @@
         align-items: center;
         overflow: hidden;
         max-width: 100%;
-        min-height: 50vh;
+        min-height: 80vh;
     }
 
     .title {
@@ -90,7 +90,11 @@
         }
     }
 
-    @media (min-width: 600px) {
+    @media (min-width: 750px) {
+        .hero {
+            min-height: 50vh;
+        }
+
         .title {
             font-size: 50px;
         }
