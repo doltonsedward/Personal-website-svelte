@@ -43,11 +43,8 @@
                 <h3>Fullstack Developer & Designer</h3>
                 <p class="subtitle__section-two_card">
                     I am a Full Stack Developer, Who loves
-                    developing Web App with React.Js and
-                    Mobile App with React Native. My skills
-                    were last formed at Dumbways Bootcamp
-                    Fullstack Developer in 4 weeks making Web
-                    and Mobile App
+                    developing Web App with Next.js and
+                    Mobile App with React Native.
                 </p>
                 <br>
                 <button class="btn button-theme" on:click={()=> redirect('https://www.linkedin.com/in/doltons-edward-nicholas-p', 'Linkedin')}>Hire Me</button>
